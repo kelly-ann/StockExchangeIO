@@ -10,10 +10,12 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			
+			System.out.println("Hi " + System.getProperty("user.name"));
+			
 		// download and unzip a remote file
 			String urlString = "http://www.nseindia.com/content/historical/EQUITIES/2015/JUL/cm17JUL2015bhav.csv.zip";
-			String zipFilePath = System.getProperty("user.home") + File.separator + "Desktop/Nerdiness/Java/ATempDir/foo.zip";
-			String destinationDirectory = System.getProperty("user.home") + File.separator + "Desktop/Nerdiness/Java/ATempDir";
+			String zipFilePath = "C:/Nerdiness/Java/ATempDir/foo.zip";
+			String destinationDirectory = "C:/Desktop/Nerdiness/Java/ATempDir";
 			
 			// return the list of unzipped files
 			List<String> unzippedFileList = UnzipUtility.downloadAndUnzip(urlString, zipFilePath, destinationDirectory);
